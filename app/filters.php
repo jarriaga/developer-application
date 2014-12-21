@@ -13,7 +13,7 @@
 
 App::before(function($request)
 {
-	App::abort(403, 'You aren\'t doing it right.');
+	//App::abort(403, 'You aren\'t doing it right.');
 });
 
 
@@ -95,5 +95,5 @@ Route::filter('check-query', function()
 	if (!is_null(Input::query('name'))) {
 		Session::flash('error', 'Why would you submit a GET form...');
 	}
-	User::all(); // this is the problem - erase it. `User` is pointless in the app.
+	//User::all(); // this is the problem - erase it. `User` is pointless in the app.
 });
